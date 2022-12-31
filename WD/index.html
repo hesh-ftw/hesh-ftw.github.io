@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="wideth=device-width, initial-scale=1.0">
+        <title> My Portfolio </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/ceb6b968e2.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+        <div class="container">
+            <nav>
+                
+                <ul id="sidemenu">
+                    <li><a href="#header">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#portfolio">my works</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars"onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineeering Undergraduate</p>
+                <h1> Hi,I'm <span>Chamath</span><br> Heshan form SriLanka</h1>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------about---------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="images/img12.jpg"> 
+                </div>
+                <div class="about-col2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        i'm chamath heshan. Currently i'm reading bachelors degree in Software Engineeering at
+                        General Sir John Kotelawala Defence University.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                        <p class="tab-links" onclick="opentab('experiance')"> Experience</p>
+                        <p class="tab-links" onclick="opentab('education')"> Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing web/app interfaces</li>
+                            <li><span>Web Development</span><br>Web app development</li>
+                            <li><span>App Development</span><br>Building small andriod apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiance">
+                        <ul>
+                            <li><span>INDUSTRIAL</span><br>Currently i have no any industrial experience</li>
+                            <li><span>SELF STUDY</span><br>I have been following coding for a year</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>ACADAMIC</span><br>I studied at Mahanama College - Colombo 03 since grade 1<br> I have
+                                 successfully completed GCE OL's and AL's Examination</li>
+                            <li><span>hIGHER STUDIES</span><br>Reading a bachelors degree in Software Engineeering at <br>
+                                General Sir John Kotelawala Defence University (since 2022 jan)</li>
+                            <li><span>OTHER</span><br> I have completed a diploma in English at ESOFT metro campus<br>
+                            I have completed a full stack development(web disigning) and a pyton course at university of moratuwa </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+<!-----------------------portfolio--------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Works</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Web Design</h2>
+                <p>I can create personal/professional websites for you.if you want for more info you can contact me.
+                    
+                </p>
+                
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2>
+                <p>You can contact me, If you want to build a unique UI for your web app using html,css,java script. 
+
+                </p>
+                
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>
+                    i am creating small applications using java and c++.
+                </p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <!-------------------------contact------------------------>
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fas fa-paper-plane"></i> chamathheshan076@gmail.com</p>
+                    <p> <i class="fas fa-phone-square-alt"></i> 0768089797</p>
+                    <div class="social-icon">
+                        <a href="https://www.facebook.com/chamath.aluthwaththa?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+                        <a href="https://mobile.twitter.com/ChamathHeshan"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/hesh.ftw/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/chamath-heshan-1896a7237"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/mycvexample.docx" download class="btn" > Download CV</a>
+                    
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"> </textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © chamathHeshan. All right recieved !</p>
+        </div>
+    </div>
+    <script>
+        var tablinks =document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tablink of tabcontents){
+                tablink.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyP1h-pT9bbx7xFt4JX49OhkEAUjUSTKHZDJo5X7OgOtyhyt5U-3P044z_VZXRBEw4OtQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message Sent Successfully!"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    </body>
+</html>
